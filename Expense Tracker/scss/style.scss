@@ -1,0 +1,57 @@
+@import "abstract/mixin";
+@import "abstract/reset";
+@import "abstract/common";
+
+.main {
+    margin: 30px auto;
+    width: 350px;
+
+    &__money {
+        background-color: #fff;
+        box-shadow: var(--box-shadow);
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+
+        &-income {
+            flex: 1;
+            text-align: center;
+            border-right: 1px solid #dedede;
+        }
+
+        &-expense {
+            flex: 1;
+            text-align: center;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 40px;
+
+        li {
+            background-color: #fff;
+            box-shadow: var(--box-shadow);
+            color: #333;
+            display: flex;
+            justify-content: space-between !important;
+            position: relative;
+            padding: 10px;
+            margin: 10px 0;
+
+            &.plus {
+                border-right: 5px solid #2ecc71;
+            }
+
+            &.minus {
+                border-right: 5px solid #c0392b;
+            }
+
+            &:hover .delete-btn {
+                opacity: 1;
+            }
+        }
+    }
+}

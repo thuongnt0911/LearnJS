@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn JS</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!--Change HTML content-->
+    <h3>Change HTML content</h3>
+    <p id="content">Hello</p>
+    <button type="button" class="btn-primary" onclick='document.getElementById("content").innerHTML="Goodbye"'>Click
+        me!</button>
+    <hr>
+
+    <!--Change HTML attribute-->
+    <h3>Change HTML attribute value</h3>
+    <button type="button" class="btn-primary" onclick='document.getElementById("image").src="image1.jpg"'>Image
+        1</button>
+    <img src="image2.webp" alt="" id="image" width="150px">
+    <button type="button" class="btn-primary" onclick="document.getElementById('image').src='image2.webp'"> Image
+        2</button>
+    <hr>
+
+    <!--Change HTML style-->
+    <h3>Change HTML style</h3>
+    <p id="content1">Hello</p>
+    <p id="content2">Have a good day!</p>
+    <button type="button" class="btn-primary" onclick=" change_Style()">Click me!</button>
+    <hr>
+
+    <!--hide/show HTMl element-->
+    <h3>Hide HTML element</h3>
+    <div class=" change_elm d-flex">
+        <div class="change_elm__hide">
+            <p id="content3">Thuong olala</p>
+            <button type="button" class="btn-primary" onclick="hideElm()">Hide</button>
+        </div>
+
+        <div class="change_elm__show">
+            <p id="content4">Thuong olala</p>
+            <button type="button" class="btn-primary" onclick="showElm()">Show</button>
+        </div>
+    </div>
+    <hr>
+    <!--Operator and variables-->
+    <h3>Operators and variables</h3>
+    <p id="num1">Number 1 is: 5</p>
+    <p id="num2">Number 2 is: 3</p>
+    <p>Total is:
+        <span id="total"> </span>
+    </p>
+    <button type="button" class="btn-primary" onclick="sum()">Click</button>
+    <hr>
+    <!--Array-->
+    <h3>Array</h3>
+    <p>Array: </p>
+    <p id="show_array"></p>
+    <button type="button" class="btn-primary" onclick="showArray()">Show</button>
+    <p>First Element: </p>
+    <p id="first_elm"></p>
+    <button type="button" class="btn-primary" onclick="firstElm()">Show</button>
+    <hr>
+
+    <!--Object-->
+    <h3>Object</h3>
+    <p>My info</p>
+    <button type="button" class="btn-primary" onclick="info()">Show</button>
+    <p id="info"></p>
+    <hr>
+
+    <!--Homework-->
+    <h3>Exercise</h3>
+    <p>
+        Viết chương trình tìm tất cả các số chia hết cho 17 hoặc 7 nhưng không phải bội số của 5 và 3, nằm trong đoạn 17
+        và 1000 (tính cả 17 và 1000).
+        Các số thu được sẽ được in thành chuỗi trên một dòng, cách nhau bằng dấu phẩy.
+    </p>
+    <button type="button" class="btn-primary" onclick="showResult()">Show result!</button>
+    <p id="result"></p>
+    <hr>
+
+    <!--palindrome-->
+    <h3>Palindrome Number</h3>
+    <input type="text" class="form-control" placeholder="Input string..." id="check_number" width="30%"
+        style="margin-bottom: 30px;">
+    <button type="button" class="btn-primary" onclick="checkPalindrome()">Check</button>
+    <p id="result2"></p>
+    <hr>
+
+    <!--Triangle-->
+    <h3>Christmas Tree</h3>
+    <input type="text" class="form-control" placeholder="Input number of row..." id="number_row"
+        style="margin-bottom: 30px;">
+    <button type="button" class="btn-primary" onclick="drawTree()">Show</button>
+    <p id="tree"></p>
+    <hr>
+    <!--Push-->
+    <h3>Push Array</h3>
+
+    <p>The length property provides an easy way to append new elements to an array without using the push() method.</p>
+
+    <button onclick="myPush()" class="btn-primary">Try it</button>
+
+    <p id="push"></p>
+
+    <!--Shift-->
+
+    <h3>Shift</h3>
+
+    <p>The shift() method removes the first element of an array (and "shifts" all other elements to the left):</p>
+
+    <p id="shift1">fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+    <p>After shift()</p>
+    <p id="shift2"></p>
+    <button class="btn-primary" onclick="myShift()">Try it</button>
+    <hr>
+    <!--Slice-->
+    <h3>splice()</h3>
+
+    <p>The splice() method adds new elements to an array.</p>
+
+    <button onclick="mySlice1()" class="btn-primary">Try it</button>
+
+    <p id="slice1"></p>
+    <p id="slice2"></p>
+
+    <button onclick="mySlice2()" class="btn-primary">Try it</button>
+    <p id="slice4"></p>
+    <p id="slice3"></p>
+    <hr>
+
+    <h4>Remove 1 element</h4>
+    <p id="slice6">Banana, Orange, Apple, Mango</p>
+    <button class="btn-primary" onclick="mySlice3()"> Remove 1 elm</button>
+    <p id="slice5"></p>
+    <hr>
+    <!--Concat-->
+    <h3>Concat</h3>
+    <p>"Cecilie", "Lone"</p>
+    <p>"Emil", "Tobias", "Linus"</p>
+    <button class="btn-primary" onclick="myConcat()">Concat</button>
+    <p id="concat"></p>
+    <hr>
+    <!-- sort array alphabet-->
+    <h3>Sort + Reverse</h3>
+    <p>"Banana", "Orange", "Apple", "Mango"</p>
+    <button class="btn-primary" onclick="mySort()">Sort</button>
+    <p id="sort"></p>
+    <button class="btn-primary" onclick="myReverse()">Reverse</button>
+    <p id="reverse"></p>
+    <button class="btn-primary" onclick="sortReverse()">Sort+Reverse</button>
+    <p id="reverse_sort"></p>
+    <hr>
+    <!--Numberic Sort-->
+    <h3>Numberic Sort</h3>
+    <p>40, 100, 1, 5, 25, 10</p>
+    <button class="btn-primary" onclick="increaseNumberic()">Increase</button>
+    <p id="increase"></p>
+    <button class="btn-primary" onclick="decreaseNumberic()">Decrease</button>
+    <p id="decrease"></p>
+
+    <!--Clock-->
+    <h3>Clock</h3>
+    <div class="clock">
+        <button type="button" onclick="startTime()">Clock</button>
+        <div id="timer" class="timer">
+
+        </div>
+    </div>
+    <hr>
+    <h3>Check Leap Year</h3>
+    <input type="text" id="check_year" class="form-control" placeholder="Input year....">
+    <button type="button" class="btn-primary" onclick="checkYear()" style="margin-top: 20px;">Check</button>
+
+    <script>
+        function checkSNT(n) {
+            var flag = true;
+            if (n < 2) {
+                flag = false;
+            }
+            else {
+                for (let i = 2; i < n - 1; i++) {
+                    if (n % i == 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            return flag;
+        }
+        console.log(checkSNT(7));
+        function test6() {
+            var arr = [[1, 2, 3], [1, 4, 3], [1, 6, 5]];
+            var sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    if (checkSNT(arr[i][j]) == true) {
+                        sum = sum + arr[i][j];
+                    }
+                }
+            }
+            console.log(sum);
+        }
+
+        /*Fibonacci*/
+        var num1 = 0;
+        var num2 = 1;
+        var num3;
+        function fibonacci() {
+            for (let i = 0; i <= 100; i++) {
+                num3 = num1 + num2;
+                num1 = num2;
+                num2 = num3;
+                console.log(num3);
+            }
+        }
+
+
+
+    </script>
+    <!--Javascript-->
+    <script src="main.js"></script>
+
+
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator - ThuongNT</title>
+
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <!--Boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!--Css-->
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <!-- <input type="number" value="0" class="main__input" id="input_number"> -->
+        <div class="main__output">
+            <div class="main__output-previous" data-previous></div>
+            <div class="main__output-current" data-current></div>
+        </div>
+        <div class="main__key">
+            <button class=" btn main__key-operator" id="data-clear-all">C</button>
+            <button class=" btn main__key-operator" data-delete><i class="fas fa-backspace"></i></button>
+            <button class=" btn main__key-operator" data-operator>%</button>
+            <button class=" btn main__key-operator" data-operator>/</button>
+            <button class=" btn main__key-number" id="data-number">7</button>
+            <button class=" btn main__key-number" id="data-number">8</button>
+            <button class=" btn main__key-number" id="data-number">9</button>
+            <button class=" btn main__key-operator" data-operator>X</button>
+            <button class=" btn main__key-number" id="data-number">4</button>
+            <button class=" btn main__key-number" id="data-number">5</button>
+            <button class=" btn main__key-number" id="data-number">6</button>
+            <button class=" btn main__key-operator" data-operator>-</button>
+            <button class=" btn main__key-number" id="data-number">1</button>
+            <button class=" btn main__key-number" id="data-number">2</button>
+            <button class=" btn main__key-number" id="data-number">3</button>
+            <button class=" btn main__key-operator" data-operator>+</button>
+            <button class=" btn main__key-operator" data-operator>+/-</button>
+            <button class=" btn main__key-number" id="data-number">0</button>
+            <button class=" btn main__key-operator" data-operator>.</button>
+            <button class=" btn main__key-operator" data-equals>=</button>
+        </div>
+    </div>
+    <!--Js-->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 50px;
+}
+
+img {
+    width: 150px;
+}
+
+button {
+    outline: none;
+    border: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+.change_elm {
+    width: 400px;
+
+    &__hide {
+        margin-right: 30px;
+    }
+
+    &__show {
+        #content4 {
+            display: none;
+        }
+    }
+}
